@@ -1,2 +1,2 @@
 #!/bin/bash
-test ! -s file
+ping 192.168.91.215
