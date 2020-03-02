@@ -4,10 +4,7 @@ pipeline {
     stages {
         stage('Build') { 
             steps {
-                sh ("for host in 192.168.91.215
-                     do
-                        ssh $host "exit"
-                     done")
+                sh ssh root@192.168.68.216 "exit"
             }
         }
         stage('Test') { 
