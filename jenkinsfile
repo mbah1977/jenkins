@@ -1,10 +1,10 @@
-
+def name = "paul"
 pipeline {
     agent any 
     stages {
         stage('Build') { 
             steps {
-                sh ("echo 'lor'")
+                echo ${name}
             }
         }
         stage('Test') { 
