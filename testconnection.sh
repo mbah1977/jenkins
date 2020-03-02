@@ -1,2 +1,2 @@
 #!/bin/bash
-test -s file
+test ! -s file
