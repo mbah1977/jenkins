@@ -1,2 +1,3 @@
 #!/bin/bash
-ping -c4 192.168.91.215
+
+ssh root@192.168.91.215 "exit"
