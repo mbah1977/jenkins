@@ -35,8 +35,8 @@ pipeline {
         stage('git_pull') {
                   steps {
                       // withCredentials([sshUserPrivateKey(credentialsId: 'root-key', keyFileVariable: 'root-key', passphraseVariable: '', usernameVariable: 'root-key')]) {
-                      // sh("git pull git@github.com:mbah1977/jenkins.git")
-                   }
+                      // sh("git pull git@github.com:mbah1977/jenkins.git") }
+                   
 		 }
             }
       }
