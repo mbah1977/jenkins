@@ -1,2 +1,3 @@
 #!/bin/bash
- ls $AdadA
+ls 
+exit 2

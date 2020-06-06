@@ -36,13 +36,13 @@ pipeline {
                   steps {
                       // withCredentials([sshUserPrivateKey(credentialsId: 'root-key', keyFileVariable: 'root-key', passphraseVariable: '', usernameVariable: 'root-key')]) {
                       // sh("git pull git@github.com:mbah1977/jenkins.git") }
-                      echo "nothing here"
+                      sh 'sh bash.sh'
 		 }
             }
       }
        post {
-           always { 
-                  echo 'do nothing here' 
+           failure { 
+                  echo 'the script above failed the pipline' 
         }
     }
 }
