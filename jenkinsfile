@@ -1,11 +1,10 @@
-
+def country = "cameroon"
 
 pipeline {
 	agent any
         stages {
 	    stage('build') {
                              
-                        def country = "cameroon"
 			steps {
 				//sh 'ansible-playbook yaml.yaml -i inventory'
                                  sh "echo ${country}"
