@@ -13,7 +13,7 @@ pipeline {
                    }
                    steps {
 	             sh "echo ${country}" 
-                     echo $params.WHO
+                     echo "${params.WHO}"
                 }                 
             }
        }
