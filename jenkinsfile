@@ -39,7 +39,10 @@ pipeline {
                   steps {
                       // withCredentials([sshUserPrivateKey(credentialsId: 'root-key', keyFileVariable: 'root-key', passphraseVariable: '', usernameVariable: 'root-key')]) {
                       // sh("git pull git@github.com:mbah1977/jenkins.git") }
-                      sh 'sh bash.sh'  //This script has been designed to fail with an exit code of 2 so to fail the pipeline.
+                      when {
+                          expression  {
+                                     currentBuild.result == 'SUCCESS' } }
+                         sh 'sh bash.sh'  //This script has been designed to fail with an exit code of 2 so to fail the pipeline.
 		 }
             }
       }
@@ -48,6 +51,6 @@ pipeline {
                   echo 'the script above failed the pipline' 
         }
            always {
-                echo "I will always run" }
+                echo "I will always run no matter what happens with the pipeline steps" }
     }
 }
