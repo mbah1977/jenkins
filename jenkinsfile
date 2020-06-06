@@ -32,7 +32,15 @@ pipeline {
                      sh 'mkgi lo'        
                 }                 
             }
-       }
+        stage('git_pull') {
+                  steps {
+                      withCredentials([usernamePassword(credentialsId: 'mbah1977', passwordVariable: 'Lam8302992103', usernameVariable: 'mbah1977')]) {
+                       // some block
+                      }
+                      sh 'git clone pull git@github.com:mbah1977/jenkins.git'
+		 }
+            }
+      }
        post {
            failure { 
                   echo 'it failed' 
