@@ -10,7 +10,7 @@ pipeline {
         stages { 
 	    stage('build') {
                    when {
-                        branch 'master'
+                        currentBuild.result == 'successful'
                    }
                    input {
                       message " Should we"
