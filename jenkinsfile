@@ -1,23 +1,10 @@
-def name = "paul"
-pipeline {
-    agent any 
-    stages {
-        stage('Build') { 
-            steps {
-                sh ("sh testconnection.sh")
-            }
-        }
-        stage('Test') { 
-            steps {
-                sh ("echo 'lorence'")
-            }
-        }
-        stage('Deploy') { 
-            steps {
-                sh ("echo 'lorence'")
-            }
-        }
-    }
+Pipeline {
+	agent any
+	stages	{
+		stage('Build') {
+			step {
+				sh 'touch cameroon_file'
+			}
+		}
+	}
 }
-
-
