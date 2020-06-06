@@ -16,6 +16,11 @@ pipeline {
                      sh "echo ${woman}"
                 }                 
             }
+       }
+       post {
+           failure {
+                   sh 'it failed'
+	}
     }        
 }
 
