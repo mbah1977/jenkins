@@ -4,8 +4,12 @@ pipeline {
 	agent any
         stages { 
 	    stage('build') {
+                   input {
+                      message " Should we"
+                      ok" yes"
+                   }
                    steps {
-	             sh "echo ${country}" || sh 'echo lorence'
+	             sh "echo ${country}" || 'echo lorence'
                 }                 
             }
     }        
