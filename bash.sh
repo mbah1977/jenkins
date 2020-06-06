@@ -1,2 +1,2 @@
-#/in/bash
-echo $AdadA
+#!/bin/bash
+ ls $AdadA
