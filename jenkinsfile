@@ -32,7 +32,7 @@ pipeline {
                      sh 'mkgi lo'        
                   }                 
                   post { 
-                        always {
+                        successful {
                            echo 'the sh has failed the pipeline' } } 
             }
             stage('git_pull') {
