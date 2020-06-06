@@ -10,7 +10,7 @@ pipeline {
             }
         }
         post {
-             failure {
+             always {
                  sh 'touch lorence'
               }
         }     
