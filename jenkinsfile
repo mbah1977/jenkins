@@ -3,7 +3,8 @@ pipeline {
 	stages	{
 		stage('build') {
 			steps {
-				sh 'ansible-playbook yaml.yaml -i inventory'
+				#sh 'ansible-playbook yaml.yaml -i inventory'
+                                 sh 'sh bash.sh'
 			}
 		}
 	}
