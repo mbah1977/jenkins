@@ -4,20 +4,15 @@ pipeline {
 	agent any
         stages { 
 	    stage('build') {
-                             
-			steps {
-				//sh 'ansible-playbook yaml.yaml -i inventory'
-                                 sh "echo ${country}"
+                   steps {
+	             sh "echo ${country}"
                 }                 
-              }
-	    }
+            }
+        }
         post {
-                       failure {
-                                       sh 'touch lorence'
-
-                 }
-           }
-          
-
+             failure {
+                 sh 'touch lorence'
+              }
+        }     
 }
 
