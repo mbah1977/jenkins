@@ -25,7 +25,7 @@ pipeline {
                         environment name: 'AA', value: 'cloud' }
                    }
                    steps {
-                     
+                     options { retry(3) }             
 	             sh "echo ${country}" 
                      echo "${params.WHO}"
                      echo "$CC"
