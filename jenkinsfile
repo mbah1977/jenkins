@@ -9,7 +9,7 @@ pipeline {
                       ok" yes"
                    }
                    steps {
-	             sh "echo ${country}" || 'echo lorence'
+	             sh "echo ${country}" 
                 }                 
             }
     }        
