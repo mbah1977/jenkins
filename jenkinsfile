@@ -32,7 +32,7 @@ pipeline {
                    //  sh 'mkgi lo'        
                 }                 
             }
-        stage('git_pull') {
+            stage('git_pull') {
                   steps {
                       // withCredentials([sshUserPrivateKey(credentialsId: 'root-key', keyFileVariable: 'root-key', passphraseVariable: '', usernameVariable: 'root-key')]) {
                       // sh("git pull git@github.com:mbah1977/jenkins.git") }
