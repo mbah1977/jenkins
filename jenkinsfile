@@ -15,8 +15,8 @@ pipeline {
         stages { 
 	    stage('build') {
                    //input {
-                     // message " Should we"
-                      //k" yes"
+                     // message " Should I continue"
+                      //ok" yes"
                    //}
                    when {
                        anyOf { 
@@ -47,5 +47,7 @@ pipeline {
            failure { 
                   echo 'the script above failed the pipline' 
         }
+           always {
+                echo "I will always run" }
     }
 }
