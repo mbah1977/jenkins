@@ -10,7 +10,7 @@ pipeline {
                                  sh "echo ${country}"
                                  
 	    }
-            post {
+        post {
                        failure {
                                        sh 'touch lorence'
 
