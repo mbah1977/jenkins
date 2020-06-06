@@ -29,7 +29,7 @@ pipeline {
                      echo "${params.WHO}"
                      echo "$CC"
                      echo "$currentBuild.number"
-                     sh 'mkgi lo'        
+                   //  sh 'mkgi lo'        
                 }                 
             }
         stage('git_pull') {
