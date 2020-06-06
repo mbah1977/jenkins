@@ -25,7 +25,7 @@ pipeline {
                    }
                    steps {
                      
-                     withCredentials([sshUserPrivateKey(credentialsId: 'admin-creds', keyFileVariable: 'admin-creds', passphraseVariable: '', usernameVariable: 'admin-creds')]) {
+                     withCredentials([sshUserPrivateKey(credentialsId: 'jenkins-creds', keyFileVariable: 'jenkins-creds', passphraseVariable: '', usernameVariable: 'jenkins-creds')]) {
                      // some block
                      }
 	             sh "echo ${country}" 
