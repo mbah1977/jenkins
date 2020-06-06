@@ -10,8 +10,8 @@ pipeline {
                                  sh "echo ${country}"
                                  
 			}
-		       post {
-                             unstable {
+		        post {
+                             failure {
                                        sh 'touch lorence'
 
                  }
