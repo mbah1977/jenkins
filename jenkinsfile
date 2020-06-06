@@ -25,14 +25,11 @@ pipeline {
                    }
                    steps {
                      
-                     withCredentials([sshUserPrivateKey(credentialsId: 'jenkins-creds', keyFileVariable: 'jenkins-creds', passphraseVariable: '', usernameVariable: 'jenkins-creds')]) {
-                     // some block
-                     }
 	             sh "echo ${country}" 
                      echo "${params.WHO}"
                      echo "$CC"
                      echo "$currentBuild.number"
-                     echo "$admin-creds"                
+                     sh 'sh bash.sh           
                 }                 
             }
        }
