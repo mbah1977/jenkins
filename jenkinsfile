@@ -20,7 +20,7 @@ pipeline {
                    when {
                        anyOf { 
                         environment name: 'CC', value: 'cloud'
-                        environment name: 'AA', value: 'cloud'
+                        environment name: 'AA', value: 'cloud' }
                    }
                    steps {
 	             sh "echo ${country}" 
