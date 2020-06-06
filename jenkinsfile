@@ -14,7 +14,8 @@ pipeline {
            string(name:'WHO', defaultValue: 'lorence', description: 'nothing')
         }
         stages { 
-	    stage('build') {
+	    stage('build') { 
+                     options { retry(3) }             
                    //input {
                      // message " Should I continue"
                       //ok" yes"
@@ -25,7 +26,6 @@ pipeline {
                         environment name: 'AA', value: 'cloud' }
                    }
                    steps {
-                     options { retry(3) }             
 	             sh "echo ${country}" 
                      echo "${params.WHO}"
                      echo "$CC"
