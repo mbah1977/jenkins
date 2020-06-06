@@ -9,6 +9,9 @@ pipeline {
         }
         stages { 
 	    stage('build') {
+                   when {
+                        branch 'master'
+                   }
                    input {
                       message " Should we"
                       ok" yes"
