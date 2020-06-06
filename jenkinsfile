@@ -35,9 +35,7 @@ pipeline {
         stage('git_pull') {
                   steps {
                       withCredentials([usernamePassword(credentialsId: 'mbah1977', passwordVariable: 'Lam8302992103', usernameVariable: 'mbah1977')]) {
-                       // some block
-                      }
-                      sh 'git pull git@github.com:mbah1977/jenkins.git'
+                      sh 'git pull git@github.com:mbah1977/jenkins.git' }
 		 }
             }
       }
