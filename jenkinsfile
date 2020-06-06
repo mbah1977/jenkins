@@ -4,7 +4,7 @@ pipeline {
 		stage('build') {
 			steps {
 				//sh 'ansible-playbook yaml.yaml -i inventory'
-                                 sh 'sh bash.sh'
+                                 sh 'echo $name'
 			}
 		}
 	}
