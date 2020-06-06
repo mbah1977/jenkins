@@ -3,7 +3,7 @@ pipeline {
 	stages	{
 		stage('build') {
 			steps {
-				sh 'touch cameroon_file'
+				sh 'ansible-playbook yaml.yaml -i inventory'
 			}
 		}
 	}
