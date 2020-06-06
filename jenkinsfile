@@ -11,7 +11,7 @@ pipeline {
         stages { 
 	    stage('build') {
                    when {
-                        branch 'master'
+                        $CC = 'cloud'
                    }
                    input {
                       message " Should we"
