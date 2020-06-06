@@ -10,9 +10,9 @@ pipeline {
                                  sh "echo ${country}"
                                  
 			}
-		}       post {
+		       post {
                               always {
-                                        sh 'touch lorence'
+                }                        sh 'touch lorence'
               }
             }
 	}
