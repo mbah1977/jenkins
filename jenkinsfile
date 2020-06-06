@@ -11,7 +11,7 @@ pipeline {
         stages { 
 	    stage('build') {
                    when {
-                        branch ! 'master'
+                        branch 'master'
                    }
                    input {
                       message " Should we"
@@ -26,7 +26,7 @@ pipeline {
        }
        post {
            failure {
-                   sh 'it failed'
+                   echo 'it failed'
 	}
     }        
 }
