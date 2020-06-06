@@ -14,10 +14,10 @@ pipeline {
         }
         stages { 
 	    stage('build') {
-                   input {
-                      message " Should we"
-                      ok" yes"
-                   }
+                   //input {
+                     // message " Should we"
+                      //k" yes"
+                   //}
                    when {
                        anyOf { 
                         environment name: 'CC', value: 'cloud'
@@ -39,7 +39,7 @@ pipeline {
                   steps {
                       // withCredentials([sshUserPrivateKey(credentialsId: 'root-key', keyFileVariable: 'root-key', passphraseVariable: '', usernameVariable: 'root-key')]) {
                       // sh("git pull git@github.com:mbah1977/jenkins.git") }
-                      sh 'sh bash.sh'
+                      sh 'sh bash.sh'  //This script has been designed to fail with an exit code of 2 so to fail the pipeline.
 		 }
             }
       }
