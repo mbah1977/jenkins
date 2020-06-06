@@ -4,13 +4,14 @@ pipeline {
 	agent {
            node { label 'master'}
         }
+        environment { CC = 'cloud' }
         parameters {
            string(name:'WHO', defaultValue: 'lorence', description: 'nothing')
         }
         stages { 
 	    stage('build') {
                    when {
-                        currentBuild.result == 'successful'
+                        branch ! 'master'
                    }
                    input {
                       message " Should we"
@@ -19,6 +20,7 @@ pipeline {
                    steps {
 	             sh "echo ${country}" 
                      echo "${params.WHO}"
+                     echo "$CC"
                 }                 
             }
        }
