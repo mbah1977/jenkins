@@ -1,10 +1,14 @@
+def country='nigeria'
+
 pipeline {
 	agent any
 	stages	{
 		stage('build') {
+                    parameters {
+                             
 			steps {
 				//sh 'ansible-playbook yaml.yaml -i inventory'
-                                 sh 'echo $name'
+                                 sh 'echo $country'
 			}
 		}
 	}
