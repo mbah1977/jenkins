@@ -33,12 +33,8 @@ pipeline {
             }
        }
        post {
-           
-           when {
-               equals expected: 49, actual:  current.Build.number 
-           {
-                   echo 'it failed'
-            }
+           failure { 
+                  echo 'it failed' }
            always { echo "$KEY" }          
 	}
         
