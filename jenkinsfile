@@ -12,7 +12,7 @@ pipeline {
 			steps {
 				//sh 'ansible-playbook yaml.yaml -i inventory'
                                  sh "echo ${country}"
-                                 sh 'touch paul'
+                                 sh 'touch kongo'
 			}
 		}
 	}
