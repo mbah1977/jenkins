@@ -42,7 +42,7 @@ pipeline {
       }
        post {
            always { 
-                  echo '$currentBuild.result' 
+                  echo 'do nothing here' 
         }
     }
 }
