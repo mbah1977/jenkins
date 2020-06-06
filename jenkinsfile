@@ -2,6 +2,9 @@ def country = "nigera"
 
 pipeline {
 	agent any
+        parameters {
+           string(woman: 'man'
+        }
         stages { 
 	    stage('build') {
                    input {
@@ -10,6 +13,7 @@ pipeline {
                    }
                    steps {
 	             sh "echo ${country}" 
+                     sh "echo ${woman}"
                 }                 
             }
     }        
