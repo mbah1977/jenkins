@@ -11,8 +11,10 @@ pipeline {
                                  
 			}
 		       post {
-                              always {
-                }                        sh 'touch lorence'
+                             always {
+                                       sh 'touch lorence'
+
+                 }
               }
             }
 	}
