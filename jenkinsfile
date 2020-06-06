@@ -35,9 +35,7 @@ pipeline {
        }
        post {
            failure { 
-                  echo 'it failed' }
-           always { echo "$KEY" }          
-	}
-        
+                  echo 'it failed' 
+        }
+    }
 }
-
