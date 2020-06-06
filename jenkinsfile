@@ -27,6 +27,7 @@ pipeline {
 	             sh "echo ${country}" 
                      echo "${params.WHO}"
                      echo "$CC"
+                     echo "$currentBuild.number"
                      
                 }                 
             }
