@@ -4,6 +4,7 @@ pipeline {
 	agent {
            node { label 'master'}
         }
+        options { timestamp() }
         environment { 
                CC = 'cloud'
                AA = 'hey'
