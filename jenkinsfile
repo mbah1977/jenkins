@@ -41,8 +41,8 @@ pipeline {
             }
       }
        post {
-           failure { 
-                  echo 'it failed' 
+           always { 
+                  echo '$currentBiuld.result' 
         }
     }
 }
