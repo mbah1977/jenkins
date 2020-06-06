@@ -2,7 +2,11 @@ def country = "nigera"
 
 pipeline {
 	agent any
+        triggers { 
+            cron('H/1 * * *')
+        }
         stages {
+   
 	    stage('build') {
                              
 			steps {
