@@ -9,9 +9,9 @@ pipeline {
 				//sh 'ansible-playbook yaml.yaml -i inventory'
                                  sh "echo ${country}"
                                  
-			}
-		        post {
-                             failure {
+	    }
+            post {
+                       failure {
                                        sh 'touch lorence'
 
                  }
