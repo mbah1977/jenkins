@@ -4,7 +4,10 @@ pipeline {
 	agent {
            node { label 'master'}
         }
-        environment { CC = 'cloud' }
+        environment { 
+               CC = 'cloud'
+               AA = 'hey'
+         }
         parameters {
            string(name:'WHO', defaultValue: 'lorence', description: 'nothing')
         }
@@ -14,8 +17,10 @@ pipeline {
                       message " Should we"
                       ok" yes"
                    }
-                   when { 
+                   when {
+                       anyOf { 
                         environment name: 'CC', value: 'cloud'
+                        environment name: 'AA', value: 'cloud'
                    }
                    steps {
 	             sh "echo ${country}" 
