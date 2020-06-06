@@ -4,6 +4,9 @@ pipeline {
 	agent {
            node { label 'master'}
         }
+         withCredentials([sshUserPrivateKey(credentialsId: 'admin-creds', keyFileVariable: 'admin-creds', passphraseVariable: '', usernameVariable: 'admin-creds')]) {
+         // some block
+        }
         environment { 
                CC = 'cloud'
                AA = 'hey'
@@ -28,7 +31,7 @@ pipeline {
                      echo "${params.WHO}"
                      echo "$CC"
                      echo "$currentBuild.number"
-                     
+                     echo "$admin-creds"                
                 }                 
             }
        }
