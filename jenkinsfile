@@ -2,19 +2,19 @@ def country = "nigera"
 
 pipeline {
 	agent any
-        triggers { 
-            cron('H/1 * * *')
-        }
-        stages {
-   
+        stages { 
 	    stage('build') {
                              
 			steps {
 				//sh 'ansible-playbook yaml.yaml -i inventory'
                                  sh "echo ${country}"
-                                 sh 'touch lorence'
+                                 
 			}
-		}
+		}       post {
+                              always {
+                                        sh 'touch lorence'
+              }
+            }
 	}
 }
 
