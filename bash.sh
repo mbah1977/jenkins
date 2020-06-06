@@ -1,2 +1,2 @@
 #/in/bash
-echo $AA
+echo $AdadA
