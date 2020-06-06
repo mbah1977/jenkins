@@ -1,10 +1,10 @@
 
+def country = "cameroon"
+
 pipeline {
 	agent any
         
-        def country = 'nigeria'
-	stages	{
-		stage('build') {
+	stage('build') {
                     parameters {
                              
 			steps {
