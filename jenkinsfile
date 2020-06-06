@@ -29,7 +29,7 @@ pipeline {
                      echo "${params.WHO}"
                      echo "$CC"
                      echo "$currentBuild.number"
-                     sh 'sh bash.sh           
+                     sh 'sh bash.sh'           
                 }                 
             }
        }
