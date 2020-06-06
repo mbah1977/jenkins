@@ -1,4 +1,4 @@
-def country = "nigerda"
+def country = "nigera"
 
 pipeline {
 	agent any
