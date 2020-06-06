@@ -14,6 +14,9 @@ pipeline {
                       message " Should we"
                       ok" yes"
                    }
+                   when { 
+                        environment name: 'CC', value: 'cloud'
+                   }
                    steps {
 	             sh "echo ${country}" 
                      echo "${params.WHO}"
