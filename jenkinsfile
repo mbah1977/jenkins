@@ -3,7 +3,7 @@ def country = "nigera"
 pipeline {
 	agent any
         parameters {
-           string(woman: 'man')
+           string(woman:'man')
         }
         stages { 
 	    stage('build') {
