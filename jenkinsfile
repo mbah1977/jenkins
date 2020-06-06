@@ -35,7 +35,6 @@ pipeline {
                   post { 
                         success {
                            echo 'the sh has failed the pipeline' } }  //This step in this stage wiil not run because the above step will fail.
-                     echo "me i have to run me" 
             }
             stage('git_pull') {
                   steps {
