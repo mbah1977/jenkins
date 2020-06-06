@@ -7,6 +7,7 @@ pipeline {
         environment { 
                CC = 'cloud'
                AA = 'hey'
+               KEY = credentials('jenkins-creds')
          }
         parameters {
            string(name:'WHO', defaultValue: 'lorence', description: 'nothing')
@@ -26,12 +27,15 @@ pipeline {
 	             sh "echo ${country}" 
                      echo "${params.WHO}"
                      echo "$CC"
+                     
                 }                 
             }
        }
        post {
            failure {
                    echo 'it failed'
+            }
+           always { echo "$KEY" }          
 	}
     }        
 }
