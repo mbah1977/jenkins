@@ -1,7 +1,8 @@
 def country = "nigera"
 
 pipeline {
-	agent any
+	agent {
+           node { label 'any'}
         parameters {
            string(name:'WHO', defaultValue: 'lorence', description: 'nothing')
         }
