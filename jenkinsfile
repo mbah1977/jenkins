@@ -5,15 +5,9 @@ pipeline {
         stages { 
 	    stage('build') {
                    steps {
-	             sh "echo ${country}"
+	             sh "echo ${country}" || sh 'echo lorence'
                 }                 
             }
-        
-                   post {
-                       always {
-                          sh 'touch lorence'
-              }
-    }      
-  }     
+    }        
 }
 
