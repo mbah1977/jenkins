@@ -37,12 +37,10 @@ pipeline {
                            echo 'the sh has failed the pipeline' } }  //This step in this stage wiil not run because the above step will fail.
             }
             stage('git_pull') {
+   
                   steps {
                       // withCredentials([sshUserPrivateKey(credentialsId: 'root-key', keyFileVariable: 'root-key', passphraseVariable: '', usernameVariable: 'root-key')]) {
                       // sh("git pull git@github.com:mbah1977/jenkins.git") }
-                      when {
-                          expression  {
-                                     currentBuild.result == 'SUCCESS' } }
                          sh 'sh bash.sh'  //This script has been designed to fail with an exit code of 2 so to fail the pipeline.
 		 }
             }
