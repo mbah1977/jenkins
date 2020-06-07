@@ -30,7 +30,7 @@ pipeline {
                      echo "${params.WHO}"
                      echo "$CC"
                      echo "$currentBuild.number"
-                     sh 'touch jenkins-node-file'        
+                     sh 'touch another-file'        
                   }                 
                   post { 
                         success {
