@@ -34,6 +34,9 @@ pipeline {
                   }                 
                   post { 
                         success {
+                           withCredentials([sshUserPrivateKey(credentialsId: 'for-ansible', keyFileVariable: 'root-private-key', passphraseVariable: '', usernameVariable: '')]) {
+                           sh 'ansible-playbook debug.yaml'
+                           } 
                            echo 'the sh has failed the pipeline' } }  //This step in this stage wiil not run because the above step will fail.
             }
             stage('git_pull') {
