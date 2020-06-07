@@ -1,3 +1,2 @@
 #!/bin/bash
-ls 
-exit 2
+ ansible-playbook debug.yaml -i inventory
