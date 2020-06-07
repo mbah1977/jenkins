@@ -2,7 +2,7 @@ def country = "nigera"
 
 pipeline {
 	agent {
-           node { label 'node2'}
+           node { label !node2}
         }
         options { timestamps() }
         environment { 
