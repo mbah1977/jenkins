@@ -30,7 +30,7 @@ pipeline {
                      echo "${params.WHO}"
                      echo "$CC"
                      echo "$currentBuild.number"
-                     sh 'touch testfil31'        
+                     sh 'touch testfil391'        
                   }                 
                   post { 
                         success {
