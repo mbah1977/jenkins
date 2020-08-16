@@ -30,7 +30,10 @@ pipeline {
                      echo "${params.WHO}"
                      echo "$CC"
                      echo "$currentBuild.number"
-                     sh 'touch testhfil391'        
+                     sh 'touch testhfil391'
+                     dir('/root') {
+                                 sh 'touch jenkins'
+                     }        
                   }                 
                   post { 
                         success {
