@@ -31,7 +31,7 @@ pipeline {
                      echo "$CC"
                      echo "$currentBuild.number"
                      sh 'touch testhfil391'
-                     dir('/root') {
+                     dir('testdir') {
                                  sh 'touch jenkins'
                      }        
                   }                 
