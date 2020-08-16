@@ -11,7 +11,7 @@ pipeline {
                KEY = credentials('jenkins-creds') //Calling credentials or secrets saved in jenkins UI
          }
         parameters {
-           string(name:'WHO', defaultValue: 'lorence', description: 'nothing')
+           string(name:'WHO', defaultValue: 'trump', description: 'nothing')
         }
         stages { 
 	    stage('build') { 
