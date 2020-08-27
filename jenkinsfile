@@ -37,7 +37,7 @@ pipeline {
                   }                 
                   post { 
                         success {
-                           withCredentials([sshUserPrivateKey(credentialsId: 'for-ansible', keyFileVariable: 'root-private-key', passphraseVariable: '', usernameVariable: '')]) {
+                           withVault(configuration: [timeout: 60, vaultCredentialId: 'vault-token', vaultUrl: 'http://192.168.91.168:8200'], vaultSecrets: [[path: 'secret/ansible', secretValues: [[vaultKey: 'username'], [vaultKey: 'password']]]]) {
                            sh 'sh bash.sh'
                            } 
                            echo 'the sh has failed the pipeline' } }  //This step in this stage wiil not run because the above step will fail.
