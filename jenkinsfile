@@ -8,7 +8,6 @@ pipeline {
         environment { 
                CC = 'cloud'
                AA = 'hey'
-               KEY = credentials('jenkins-creds') //Calling credentials or secrets saved in jenkins UI
          }
         parameters {
            string(name:'WHO', defaultValue: 'trump', description: 'nothing')
