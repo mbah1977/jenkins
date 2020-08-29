@@ -37,8 +37,8 @@ pipeline {
                   }                 
                   post { 
                         success {
-                           withVault(configuration: [timeout: 60, vaultCredentialId: 'vault-token', vaultUrl: 'http://192.168.91.168:8200'], vaultSecrets: [[path: 'secrets/ansible', secretValues: [[vaultKey: 'username'], [vaultKey: 'password']]]]) {
-                           sh 'sh bash.sh'
+                           sh thVault(configuration: [timeout: 60, vaultCredentialId: 'scripted-toekn', vaultUrl: 'localhost:8080'], vaultSecrets: [[path: 'secrets/ansible', secretValues: [[vaultKey: 'username'], [vaultKey: 'password']]]]) {
+    			   sh bash.sh'
                            } 
                            echo 'the sh has failed the pipeline' } }  //This step in this stage wiil not run because the above step will fail.
             }
