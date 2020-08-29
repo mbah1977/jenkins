@@ -38,7 +38,7 @@ pipeline {
                   post { 
                         success {
                            sh thVault(configuration: [timeout: 60, vaultCredentialId: 'scripted-toekn', vaultUrl: 'localhost:8080'], vaultSecrets: [[path: 'secrets/ansible', secretValues: [[vaultKey: 'username'], [vaultKey: 'password']]]]) {
-    			   sh bash.sh'
+    			   sh bash.sh
                            } 
                            echo 'the sh has failed the pipeline' } }  //This step in this stage wiil not run because the above step will fail.
             }
