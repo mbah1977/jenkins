@@ -37,8 +37,8 @@ pipeline {
                   }                 
                   post { 
                         success {
-				withCredentials([[$class: 'VaultTokenCredentialBinding', addrVariable: 'VAULT_ADDR', credentialsId: 'scripted-toekn', tokenVariable: 'VAULT_TOKEN', vaultAddr: 'http://localhost:8080/']]) {                        	
-			      sh bash.sh
+			      withVault(configuration: [timeout: 60, vaultCredentialId: 'scripted_token', vaultUrl: 'http://localhost:8080'], vaultSecrets: [[path: 'secrets/ansible', secretValues: [[vaultKey: 'username'], [vaultKey: 'password']]]]) {
+    				sh bash.sh
                            } 
                               echo 'the sh has failed the pipeline' } }  //This step in this stage wiil not run because the above step will fail.
             }
