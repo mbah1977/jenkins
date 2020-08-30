@@ -1,0 +1,5 @@
+{
+  "token_policies": "dev-policy",
+  "token_ttl": "1h",
+  "token_max_ttl": "4h"
+}
