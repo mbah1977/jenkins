@@ -28,6 +28,7 @@ pipeline {
 	             sh "echo ${country}" 
                      echo "${params.WHO}"
                      echo "$CC"
+                     echo "$WORKSPACE
                      echo "$currentBuild.number"
                      sh 'touch testhfil391'
                      dir('testdir') {
